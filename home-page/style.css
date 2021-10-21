@@ -1,0 +1,51 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: auto;
+  font-size: 20px;
+  color: #fff;
+}
+
+body {
+  background: linear-gradient(90deg, #7400B8, #6930C3, #5E60CE, #5390D9, #4EA8DE, #48BFE3, #56CFE1, #64DFDF, #72EFDD, #80FFDB, #72EFDD, #64DFDF, #56CFE1, #48BFE3, #4EA8DE, #5390D9, #5E60CE, #6930C3, #7400B8);
+  background-size: 1500% 1500%;
+  animation: background_animation 15s ease infinite;
+  margin: 0;  
+  padding: 20px;
+}
+
+.clear {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  padding: 2px;
+  margin: 10px auto 0 auto;
+  transition: all .3s ease;
+}
+
+.clear:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+@keyframes background_animation {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}

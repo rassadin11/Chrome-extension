@@ -1,0 +1,28 @@
+{
+    "name": "Delete notifications on ege.sdamgia.ru",
+    "description": "Improve your skills without obstacles!",
+    "version": "1.1",
+    "manifest_version": 3,
+    "permissions": ["storage", "activeTab", "scripting", "history"],
+    "background": {
+      "service_worker": "home-page/background.js"
+    },
+    "action": {
+      "default_popup": "home-page/index.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.sdamgia.ru/*", "http://*.sdamgia.ru/*"],
+        "js": ["script.js"]
+      },
+      {
+        "matches": ["https://*.sdamgia.ru/", "http://*.sdamgia.ru/"],
+        "js": ["main-script.js"]
+      }
+    ],
+    "page_action": {
+      "default_title": "Test Extension",
+      "default_popup": "index.html"
+    },
+    "options_page": "options/options.html"
+}
